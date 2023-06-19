@@ -8,9 +8,9 @@ The Employee table containing employee data for a company is described as follow
 | Column      | Type     |
 +-------------+----------+
 | employee_id | Integer  |
-| name        | String |
-| months      | Integer |
-| salary      | Integer |
+| name        | String   |
+| months      | Integer  |
+| salary      | Integer  |
 +-------------+----------+
 
 where employee_id is an employee's ID number, name is their name, months is the total number of months they've been working for the company, and salary is their monthly salary.
@@ -18,4 +18,4 @@ where employee_id is an employee's ID number, name is their name, months is the 
 
 select name 
 from employee 
-order by name asc
+order by name asc 
