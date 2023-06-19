@@ -3,6 +3,8 @@ If two or more students both have names ending in the same last three characters
 
 Input Format
 
+The STUDENTS table is described as follows:
+
 +-------------+----------+
 | Column      | Type     |
 +-------------+----------+
