@@ -9,7 +9,7 @@ The STATION table is described as follow
 +-------------+--------------+
 | ID          | NUMBER       |
 | NAME        | VARCHAR2(21) |
-| STATE       | VARCHAR2(23) |
+| STATE       | VARCHAR2(2)  |
 | LAT_N       | NUMBER       |
 | LONG_W      | NUMBER       |
 +-------------+--------------+
