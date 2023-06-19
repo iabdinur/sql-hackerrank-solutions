@@ -32,7 +32,7 @@ The CITY table and COUNTRY is described as follows:
 | GOVERMENTFORM   | VARCHAR2(44) |
 | HESFOFSTATE     | VARCHAR2(32) |
 | CAPITAL         | VARCHAR2(4)  |
-| CODE@           | VARCHAR2(2)  |
+| CODE2           | VARCHAR2(2)  |
 +-----------------+--------------+
 
  */
