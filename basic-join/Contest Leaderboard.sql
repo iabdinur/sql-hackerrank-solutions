@@ -34,10 +34,10 @@ challenge_id is the id of the challenge for which the submission belongs to, and
 select 
 	h.hacker_id, 
     h.name, 
-    SUM(MAX_SCORE.t1) as total_score
+    sum(MAX_SCORE.t1) as total_score
 from Hackers h inner join 
 (
-    select MAX(s.score) as t1, s.hacker_id  
+    select max(s.score) as t1, s.hacker_id  
     from Submissions s
     group by s.challenge_id, s.hacker_id
     having t1 > 0
