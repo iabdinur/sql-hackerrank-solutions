@@ -1,5 +1,16 @@
 /*  Amber's conglomerate corporation just acquired some new companies. Each of the companies follows this hierarchy: 
 
+
+Founder
+⇓
+Lead Manager
+⇓
+Senior Manager
+⇓
+Manger
+⇓
+Employee 
+
 Given the table schemas below, write a query to print the company_code, founder name, total number of lead managers, 
 total number of senior managers, total number of managers, and total number of employees. Order your output by ascending company_code.
 
@@ -64,3 +75,15 @@ is the code of its senior manager, the lead_manager_code is the code of its lead
 | company_code         | String       |
 +----------------------+--------------+
 */
+
+SELECT 
+    e.company_code, 
+    MAX(founder),
+    COUNT(DISTINCT lead_manager_code),
+    COUNT(DISTINCT senior_manager_code),
+    COUNT(DISTINCT manager_code),
+    COUNT(DISTINCT employee_code)
+FROM Employee e LEFT JOIN Company c
+ON e.company_code = c.company_code
+GROUP BY e.company_code
+ORDER BY e.company_code;

@@ -14,3 +14,12 @@ Leaf: If node is leaf node.
 Inner: If node is neither root nor leaf node.
 
 */
+
+SELECT N,
+	CASE 
+    	WHEN P IS NULL THEN "Root"
+        WHEN N IN (SELECT P FROM BST) THEN "Inner"
+        ELSE "Leaf"
+    END
+FROM BST
+ORDER BY N
