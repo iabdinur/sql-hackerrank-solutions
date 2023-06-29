@@ -31,3 +31,13 @@ Names must be ordered by the salary amount offered to the best friends. It is gu
 got same salary offer.
 
 */
+
+Select S.Name
+from Students S inner join Friends f
+on S.ID = f.ID
+inner join Packages p
+on f.ID = p.ID
+inner join Packages fp
+on f.Friend_ID = fp.ID
+where fp.Salary > p.Salary
+order by fp.Salary;
